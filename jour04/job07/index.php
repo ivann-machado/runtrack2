@@ -16,7 +16,7 @@
 if (isset($_GET['hauteur']) && is_numeric($_GET['hauteur']) && isset($_GET['largeur']) && is_numeric($_GET['largeur'])) {
 	$width = (int)$_GET['largeur'];
 	$height = (int)$_GET['hauteur'];
-	echo '<div class="toit" style="width: 0; height: 0; border-left: ' . $width . 'px solid transparent; border-right: ' . $width . 'px solid transparent; border-bottom: ' . $height*2 . 'px solid #555;"></div>';
+	echo '<div class="toit" style="width: 0; height: 0; border-left: ' . $width+1 . 'px solid transparent; border-right: ' . $width+1 . 'px solid transparent; border-bottom: ' . $height*2 . 'px solid #555;"></div>';
 	echo '<div style="width: ' . $width * 2 . 'px; height: ' . $height * 2 . 'px; border: solid 1px; display: block;">';
 
 	// echo '<table border="1" style="border-collapse: collapse;">';

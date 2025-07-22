@@ -20,7 +20,7 @@ if (isset($_POST['username']) || isset($_POST['password'])) {
                 <input name="username" type="text"/>
                 <label>Password :</label>
                 <input name="password" type="password"/>
-                <input type="submit" name="submit" value="Submit" />
+                <input type="submit"/>
             </p>
     </fieldset>
 </form>

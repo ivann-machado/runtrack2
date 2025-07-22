@@ -18,7 +18,7 @@ if (isset($_GET['nombre']) && is_numeric($_GET['nombre'])) {
             <p>
                 <label>Nombre :</label>
                 <input name="nombre" type="text"/>
-                <input type="submit" name="submit" value="Submit" />
+                <input type="submit"/>
             </p>
     </fieldset>
 </form>

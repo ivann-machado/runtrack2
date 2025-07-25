@@ -86,7 +86,7 @@ button {
     background-color: cadetblue;
     color: white;
     border: aliceblue;
-    border-radius: 1em;
+    border-radius: 4px;
     margin-top: 50px;
     font-size: 2em;
 }

@@ -4,6 +4,7 @@ if (isset($_POST['reset'])) {
 	session_unset();
 }
 $gameOver = isset($_SESSION['gameOver']) ? $_SESSION['gameOver'] : false;
+$isDraw = false;
 $xTurn = isset($_SESSION['xTurn']) ? $_SESSION['xTurn'] : true;
 $board = isset($_SESSION['board']) ? $_SESSION['board'] : [['', '', ''], ['', '', ''], ['', '', '']];
 if (isset($_POST['tile']) && $_POST['tile'] >= 0 && $_POST['tile'] < 9 && !$gameOver) {
@@ -24,6 +25,10 @@ if (isset($_POST['tile']) && $_POST['tile'] >= 0 && $_POST['tile'] < 9 && !$game
 		$drLine = [$board[0][2], $board[1][1], $board[2][0]];
 		if ((count(array_unique($dlLine)) === 1 && !in_array('', $dlLine)) || (count(array_unique($drLine)) === 1 && !in_array('', $drLine))) {
 			$gameOver = true;
+		}
+		if (!$gameOver && !in_array('', array_merge(...$board))) {
+			$gameOver = true;
+			$isDraw = true;
 		}
 		a:
 	}
@@ -53,7 +58,7 @@ if (isset($_POST['tile']) && $_POST['tile'] >= 0 && $_POST['tile'] < 9 && !$game
 	<?php if ($gameOver): ?>
 		<div class="modal">
 			<div class="modal_body">
-				<div class="message"><?php echo !$xTurn ? 'X' : 'O'; ?> a remporté la partie !</div>
+				<div class="message"><?php if (!$isDraw): echo !$xTurn ? 'X' : 'O'; ?> a remporté la partie !<?php elseif ($isDraw): ?>Egalité<?php endif; ?></div>
 				<form>
 					<button class="reset_btn" action="./">Play Again</button>
 				</form>

@@ -1,0 +1,1 @@
+SELECT * FROM `etudiants` WHERE `naissance` > DATE_ADD(CURDATE(), INTERVAL -18 YEAR);

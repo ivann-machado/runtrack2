@@ -1,0 +1,1 @@
+SELECT `nom` AS 'Biggest room', `capacite` FROM `salles` WHERE `capacite` = (SELECT MAX(`capacite`) FROM `salles`);

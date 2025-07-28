@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : lun. 28 juil. 2025 à 07:45
+-- Généré le : lun. 28 juil. 2025 à 08:27
 -- Version du serveur : 8.4.3
 -- Version de PHP : 8.3.16
 
@@ -80,14 +80,14 @@ CREATE TABLE `salles` (
   `id` int NOT NULL,
   `nom` varchar(255) NOT NULL,
   `id_etage` int NOT NULL,
-  `capacité` int NOT NULL
+  `capacite` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `salles`
 --
 
-INSERT INTO `salles` (`id`, `nom`, `id_etage`, `capacité`) VALUES
+INSERT INTO `salles` (`id`, `nom`, `id_etage`, `capacite`) VALUES
 (1, 'Lounge', 1, 100),
 (2, 'Studio Son', 1, 5),
 (3, 'Broadcasting', 2, 50),

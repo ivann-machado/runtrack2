@@ -1,0 +1,1 @@
+SELECT COUNT(id) AS `nombre_etudiants` FROM `etudiants`;

@@ -1,6 +1,6 @@
 <?php
 $db = mysqli_connect('localhost', 'root', '', 'jour09');
-$etudiant = mysqli_query($db, 'SELECT COUNT(id) AS "nbEtudiants" FROM `etudiants`');
+$etudiant = mysqli_query($db, 'SELECT COUNT(id) AS "nb_etudiants" FROM `etudiants`');
 
 if (mysqli_num_rows($etudiant) > 0): ?>
 	<table border='1'>
@@ -9,7 +9,7 @@ if (mysqli_num_rows($etudiant) > 0): ?>
 		</thead>
 		<tbody>
 				<tr>
-					<td><?php echo mysqli_fetch_assoc($etudiant)['nbEtudiants']; ?></td>
+					<td><?php echo mysqli_fetch_assoc($etudiant)['nb_etudiants']; ?></td>
 				</tr>
 		</tbody>
 	</table>
